@@ -6,6 +6,7 @@ if SERVER then
 else
     include("psyaddon/shared.lua")
     include("psyaddon/cl_cmds.lua")
+    include("psyaddon/cl_hooks.lua")
 end
 
 PsyAddon.Print("psyaddon loaded")
