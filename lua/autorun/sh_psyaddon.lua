@@ -1,12 +1,12 @@
 PsyAddon = PsyAddon or {}
 if SERVER then
-    AddCSLuaFile("psyaddon/shared.lua")
-    AddCSLuaFile("psyaddon/cl_cmds.lua")
-    include("psyaddon/shared.lua")
+    include("psyaddon/shared/shared.lua")
+    include("psyaddon/server/sv_hooks.lua")
+    AddCSLuaFile("psyaddon/client/cl_hooks.lua")
+    AddCSLuaFile("psyaddon/shared/shared.lua")
 else
-    include("psyaddon/shared.lua")
-    include("psyaddon/cl_cmds.lua")
-    include("psyaddon/cl_hooks.lua")
+    include("psyaddon/shared/shared.lua")
+    include("psyaddon/client/cl_hooks.lua")
 end
 
 PsyAddon.Print("psyaddon loaded")
